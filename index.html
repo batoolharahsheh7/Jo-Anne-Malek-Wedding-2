@@ -1043,9 +1043,14 @@ top: -7px;
   
     }  
   
-  </style>  </head>  <body>  <!-- =========================  
-     OPENING ENVELOPE  
-========================= -->  <section id="opening">  <img  
+  </style> 
+</head>
+  <body> 
+    
+    <!-- =========================  
+       OPENING ENVELOPE  
+========================= --> 
+    <section id="opening">  <img  
     id="envelope"  
     src="Envelope.png"  
     alt="Wedding invitation envelope"  
@@ -1055,9 +1060,14 @@ top: -7px;
     OPEN YOUR INVITATION  
 </button>
 
-  <img src="القلب.png" alt="" class="open-heart-decoration">  </section>  <!-- =========================  
-     OPENING VIDEO  
-========================= -->  <video
+  <img src="القلب.png" alt="" class="open-heart-decoration"> 
+    </section> 
+    
+    <!-- =========================  
+    OPENING VIDEO  
+========================= --> 
+    
+    <video
 id="openingVideo"
 autoplay
 muted
@@ -1071,9 +1081,15 @@ preload="auto"
     type="video/mp4"  
 >
 
-</video>  <!-- =========================  
+</video> 
+    
+    <!-- =========================  
      WEBSITE  
-========================= -->  <main id="website">  <!-- =====================  
+========================= -->  
+    
+    <main id="website"> 
+      
+      <!-- =====================  
      PAGE 1 — CARD  
 ====================== -->  
 
@@ -1088,7 +1104,10 @@ preload="auto"
 
 <!-- =====================  
      PAGE 2 — OUR STORY  
-===================== -->  <section class="page info-page story-page">  <div class="info-box story-box">  
+===================== -->  
+      
+      <section class="page info-page story-page">  
+        <div class="info-box story-box">  
 
     <h1>  
         OUR STORY  
@@ -1122,7 +1141,9 @@ preload="auto"
 
 </div>
 
-</section>  <!-- =====================  
+</section>  
+      
+      <!-- =====================  
      PAGE 5 — COUNTDOWN
 
 ====================== -->
@@ -2186,9 +2207,13 @@ celebrationMessage.querySelector(".rsvp-celebration-text").style.display = "none
 
 </script>
 
-</section>  <!-- =========================  
+</section> 
+      
+      <!-- =========================  
      MAIN JAVASCRIPT  
-========================= -->  <script>  
+========================= --> 
+      
+      <script>  
   
 /* =========================  
    ELEMENTS  
@@ -2213,7 +2238,8 @@ const website =
 ========================= */  
   
 openButton.addEventListener("click", function () {  
-  
+  weddingMusic.currentTime = 0;
+weddingMusic.play();
     opening.style.display = "none";  
   
     openingVideo.style.display = "block";  

@@ -1,0 +1,2328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>  <meta charset="UTF-8">  <meta name="viewport"  
+content="width=device-width, initial-scale=1.0">
+
+<title>JO-Anne & Malek</title>  <style>  
+  
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');  
+  
+  /* =========================  
+   GENERAL  
+========================= */  
+  
+* {  
+    margin: 0;  
+    padding: 0;  
+    box-sizing: border-box;  
+}  
+  
+html,  
+body {  
+    width: 100%;  
+    height: 100%;  
+    overflow: hidden;  
+    background: #000;  
+}  
+  
+  
+/* =========================  
+   1 — OPENING ENVELOPE  
+========================= */  
+  
+#opening {  
+  
+    position: fixed;  
+  
+    inset: 0;  
+  
+    width: 100vw;  
+  
+    height: 100dvh;  
+  
+    background-image: url("Background.png");  
+  
+    background-size: cover;  
+  
+    background-position: center;  
+  
+    background-repeat: no-repeat;  
+  
+    display: flex;  
+  
+    flex-direction: column;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+  
+    z-index: 100;  
+}  
+  
+  
+#envelope {  
+  
+    width: 80vw;  
+  
+    height: auto;  
+  
+    max-height: 65vh;  
+  
+    object-fit: contain;  
+  
+    display: block;  
+}  
+  
+  
+#openButton {  
+  
+    margin-top: 40px;  
+  
+    background: none;  
+  
+    border: none;  
+  
+    color: #681f2b;  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: 15px;  
+  
+    letter-spacing: 4px;  
+  
+    cursor: pointer;  
+position: relative;  
+top: 15px;  
+}  
+  
+  
+.open-decoration {  
+  
+    margin-top: 10px;  
+  
+    color: #681f2b;  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: 18px;  
+  
+    letter-spacing: 3px;  
+}  
+  
+  .open-heart-decoration {  
+    width: 145px;  
+    height: auto;  
+    display: block;  
+    margin-top: 10px;  
+  
+    filter:  
+        drop-shadow(0 0 0 #681f2b)  
+        drop-shadow(0 0 0 #681f2b);  
+  }  
+  
+    
+/* =========================  
+   2 — OPENING VIDEO  
+========================= */  
+  
+  #openingVideo {  
+  
+    position: fixed;  
+  
+    inset: 0;  
+  
+    width: 100vw;  
+  
+    height: 100dvh;  
+  
+    background: #000;  
+  
+    object-fit: contain;  
+  
+    display: none;  
+  
+    z-index: 90;  
+  }    
+  
+  
+/* =========================  
+   3 — WEBSITE  
+========================= */  
+  
+#website {  
+  
+    position: fixed;  
+  
+    inset: 0;  
+  
+    width: 100vw;  
+  
+    height: 100dvh;  
+  
+    overflow-y: auto;  
+  
+    scroll-snap-type: y mandatory;  
+  
+    display: none;  
+  
+    background: #000;  
+}  
+  
+  
+/* Every page */  
+  
+.page {  
+  
+    width: 100vw;  
+  
+    height: 100dvh;  
+  
+    min-height: 100dvh;  
+  
+    scroll-snap-align: start;  
+  
+    scroll-snap-stop: always;  
+  
+    position: relative;  
+  
+    overflow: hidden;  
+}  
+  
+  
+/* =========================  
+   PAGE 1 — CARD  
+========================= */  
+  
+.card-page {  
+  
+    background: #000;  
+  
+    display: flex;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+}  
+  
+  
+.card-page img {  
+  
+    width: 100vw;  
+  
+    height: 100dvh;  
+  
+    object-fit: cover;  
+  
+    display: block;  
+}  
+  
+  
+  /* =========================  
+   OUR STORY PAGE - NEW  
+========================= */  
+  
+.story-page {  
+    padding: 30px 0;  
+}  
+  
+.story-box {  
+    width: 88%;  
+    max-width: 650px;  
+    max-height: 88dvh;  
+    padding: 30px 28px;  
+    overflow-y: auto;  
+    text-align: center;  
+}  
+  
+.story-text {  
+    width: 100%;  
+    max-width: 560px;  
+    margin: 0 auto;  
+}  
+  
+.story-text p {  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    color: #4b3028;  
+  
+    font-size: 14px;  
+  
+    line-height: 1.65;  
+  
+    letter-spacing: 0.15px;  
+  
+    margin: 0 0 18px;  
+  
+    text-align: center;  
+}  
+  
+.story-text p:last-child {  
+    margin-bottom: 0;  
+}  
+  
+  
+/* Mobile */  
+  
+@media (max-width: 500px) {  
+  
+    .story-box {  
+        width: 88%;  
+        padding: 27px 20px;  
+    }  
+  
+    .story-box h1 {  
+        font-size: 29px;  
+        letter-spacing: 4px;  
+    }  
+  
+    .story-text p {  
+        font-size: 12.5px;  
+        line-height: 1.65;  
+        margin-bottom: 15px;  
+    }  
+}  
+  
+  
+/* Short phones */  
+  
+@media (max-height: 700px) {  
+  
+    .story-box {  
+        max-height: 90dvh;  
+        padding-top: 22px;  
+        padding-bottom: 22px;  
+    }  
+  
+    .story-text p {  
+        font-size: 11.5px;  
+        line-height: 1.55;  
+        margin-bottom: 12px;  
+    }  
+}  
+  
+/* =========================  
+   COUNTDOWN PAGE  
+========================= */  
+  
+.countdown-page {  
+  
+    background-image: url("Background.png");  
+  
+    background-size: cover;  
+  
+    background-position: center;  
+  
+    background-repeat: no-repeat;  
+  
+    display: flex;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+  
+    padding: 30px 0;  
+}  
+  
+  
+/* White transparent frame */  
+  
+.countdown-frame {  
+  
+    width: 82%;  
+  
+    max-width: 720px;  
+  
+    height: 86%;  
+  
+    background: rgba(255, 255, 255, 0.55);  
+  
+    border: 1px solid rgba(255, 255, 255, 0.85);  
+  
+    display: flex;  
+  
+    flex-direction: column;  
+  
+    align-items: center;  
+  
+    justify-content: flex-start;  
+  
+    padding: 35px 18px 20px;  
+  
+    text-align: center;  
+}  
+  
+  
+/* Top decoration */  
+  
+.countdown-top-decoration {  
+  
+    color: #765044;  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: 24px;  
+  
+    letter-spacing: 7px;  
+  
+    margin-bottom: 25px;  
+}  
+  
+  
+/* Main title */  
+  
+.countdown-title {  
+  
+    font-family: Georgia, "Times New Roman", serif;  
+  
+    color: #633c35;  
+  
+    font-size: clamp(18px, 4.8vw, 30px);  
+  
+    font-weight: normal;  
+  
+    letter-spacing: 6px;  
+  
+    line-height: 1.35;  
+  
+    margin-bottom: 4px;  
+}  
+  
+  
+/* To forever */  
+  
+.countdown-subtitle {  
+  
+    font-family: Georgia, "Times New Roman", serif;  
+  
+    font-style: italic;  
+  
+    color: #633c35;  
+  
+    font-size: clamp(30px, 8vw, 52px);  
+  
+    line-height: 1;  
+  
+    margin-bottom: 20px;  
+}  
+  
+  
+/* =========================  
+   COUPLE PHOTO  
+========================= */  
+  
+.couple-photo-frame {  
+  
+    width: min(60vw, 300px);  
+  
+    height: min(43vh, 390px);  
+  
+    border: 2px solid #927264;  
+  
+    border-radius: 50%;  
+  
+    padding: 8px;  
+  
+    background: rgba(255, 255, 255, 0.45);  
+  
+    display: flex;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+  
+    flex-shrink: 1;  
+  
+    overflow: hidden;  
+  
+    position: relative;  
+}  
+  
+  
+.couple-photo-frame::before {  
+  
+    content: "";  
+  
+    position: absolute;  
+  
+    inset: 5px;  
+  
+    border: 1px solid rgba(146, 114, 100, 0.65);  
+  
+    border-radius: 50%;  
+  
+    pointer-events: none;  
+}  
+  
+  
+.couple-photo {  
+  
+    width: 100%;  
+  
+    height: 100%;  
+  
+    object-fit: cover;  
+  
+    border-radius: 50%;  
+  
+    display: block;  
+}  
+  
+  
+/* =========================  
+   SMALL HEART  
+========================= */  
+  
+.photo-decoration {  
+  
+    color: #765044;  
+  
+    font-size: 24px;  
+  
+    margin-top: -10px;  
+  
+    z-index: 2;  
+}  
+  
+  
+/* =========================  
+   COUNTDOWN NUMBERS  
+========================= */  
+  
+.countdown {  
+  
+    width: 100%;  
+  
+    display: grid;  
+  
+    grid-template-columns: repeat(4, 1fr);  
+  
+    margin-top: 12px;  
+  
+    color: #6d2634;  
+}  
+  
+  
+.countdown-item {  
+  
+    display: flex;  
+  
+    flex-direction: column;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+  
+    border-right: 1px solid rgba(109, 38, 52, 0.35);  
+  
+    min-width: 0;  
+}  
+  
+  
+.countdown-item:last-child {  
+  
+    border-right: none;  
+}  
+  
+  
+.countdown-number {  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: clamp(25px, 7vw, 42px);  
+  
+    line-height: 1;  
+  
+    font-weight: normal;  
+}  
+  
+  
+.countdown-label {  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: clamp(8px, 2.2vw, 13px);  
+  
+    letter-spacing: 3px;  
+  
+    margin-top: 7px;  
+  
+    color: #65433b;  
+}  
+  
+  
+/* =========================  
+   DATE  
+========================= */  
+  
+.countdown-date {  
+  
+    margin-top: 16px;  
+  
+    color: #633c35;  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: clamp(14px, 3.5vw, 20px);  
+  
+    letter-spacing: 4px;  
+}  
+  
+  
+.countdown-time {  
+  
+    margin-top: 6px;  
+  
+    color: #633c35;  
+  
+    font-family: Georgia, serif;  
+  
+    font-size: 13px;  
+  
+    letter-spacing: 3px;  
+}  
+  
+  
+/* =========================  
+   PAGES 3–6  
+========================= */  
+  
+.info-page {  
+  
+    background-image: url("Background.png");  
+  
+    background-size: cover;  
+  
+    background-position: center;  
+  
+    background-repeat: no-repeat;  
+  
+    display: flex;  
+  
+    align-items: center;  
+  
+    justify-content: center;  
+  
+    text-align: center;  
+}  
+  
+  
+.info-box {  
+  
+    width: 82%;  
+  
+    max-width: 500px;  
+  
+    padding: 35px 25px;  
+  
+    background: rgba(255, 248, 238, 0.82);  
+  
+    border: 1px solid rgba(120, 70, 45, 0.35);  
+  
+    box-shadow: 0 10px 40px rgba(70, 35, 20, 0.15);  
+}  
+  
+  
+.info-box h1 {  
+  
+    font-family: Georgia, "Times New Roman", serif;  
+  
+    font-size: 32px;  
+  
+    font-weight: normal;  
+  
+    letter-spacing: 5px;  
+  
+    color: #5b2025;  
+  
+    margin-bottom: 18px;  
+}  
+  
+  
+.line {  
+  
+    color: #a87545;  
+  
+    font-size: 20px;  
+  
+    margin-bottom: 25px;  
+}  
+  
+  .page-heart-decoration {  
+    width: 105px;  
+    height: auto;  
+    display: block;  
+    margin: -5px auto 25px;  
+  }  
+  
+.info-box p {  
+  
+    font-family: Georgia, "Times New Roman", serif;  
+  
+    color: #4b3028;  
+  
+    font-size: 18px;  
+  
+    line-height: 1.8;  
+}  
+  
+  
+.date {  
+  
+    font-size: 22px !important;  
+  
+    letter-spacing: 3px;  
+  
+    color: #6b3030 !important;  
+}  
+  
+  
+.small {  
+  
+    font-size: 16px !important;  
+}  
+  
+  
+/* =========================  
+   RSVP  
+========================= */  
+  
+.rsvp-button {  
+  
+    display: block;  
+  
+    width: 100%;  
+  
+    margin-top: 15px;  
+  
+    padding: 13px;  
+  
+    background: #6b252b;  
+  
+    color: white;  
+  
+    border: none;  
+  
+    font-family: Georgia, serif;  
+  
+    letter-spacing: 1px;  
+  
+    font-size: 14px;  
+}  
+  
+  
+/* =========================  
+   RSVP PAGE  
+========================= */  
+.rsvp-box {  
+    width: 80%;  
+    max-width: 690px;  
+    height: auto;  
+    padding: 30px 40px 15px;  
+  
+    background: rgba(255, 248, 238, 0.78);  
+    border: 1px solid rgba(255, 255, 255, 0.85);  
+    box-shadow: 0 10px 40px rgba(70, 35, 20, 0.15);  
+  
+    overflow-y: visible;  
+    text-align: center;  
+  
+    position: relative;  
+    top: 0px;  
+}  
+  
+  
+  
+  
+/* RSVP */  
+  
+.rsvp-box h1 {  
+    margin: 0 0 12px;  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 32px;  
+  
+    font-weight: normal;  
+  
+    letter-spacing: 3px;  
+  
+    color: #5b2025;  
+}  
+  
+  
+/* — ♡ — */  
+.rsvp-box img[src="القلب.png"] {  
+    width: 105px;  
+    height: auto;  
+    display: block;  
+    margin: -10px auto 10px;  
+}  
+  
+.rsvp-box .line {  
+    margin: 0 0 22px;  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 15px;  
+  
+    letter-spacing: 5px;  
+  
+    color: #8a6048;  
+}  
+  
+  
+/* Kindly let us know */  
+  
+.rsvp-intro {  
+    width: 90%;  
+    max-width: 420px;  
+  
+    margin: 0 auto 24px;  
+  position: relative;  
+top: -5px;  
+  
+    font-family: 'Allura', cursive !important;  
+    font-size: 20px !important;  
+    font-style: normal;  
+    font-weight: normal;  
+  
+    line-height: 1.35 !important;  
+    letter-spacing: 0.5px;  
+  
+    color: #765047 !important;  
+  
+    text-align: center;  
+}  
+  
+  
+/* Form */  
+  
+#rsvpForm {  
+    width: 100%;  
+  position: relative;  
+top: -10px;  
+  
+    text-align: left;  
+}  
+  
+  
+/* Labels */  
+  
+#rsvpForm label {  
+    display: block;  
+  
+    margin-top: 5px;  
+    margin-bottom: 7px;  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 9px;  
+  
+    font-weight: normal;  
+  
+    letter-spacing: 1px;  
+  
+    color: #5b302b;  
+}  
+  
+#rsvpForm label span {  
+    font-size: 9px;  
+  
+    letter-spacing: 1.5px;  
+}  
+  
+  
+/* Input + Textarea */  
+  
+#rsvpForm input,  
+#rsvpForm textarea {  
+    width: 100%;  
+  
+    padding: 5px 2px;  
+  
+    border: 1px solid rgba(120, 70, 45, 0.40);  
+  
+    border-radius: 10px;  
+  
+    background: rgba(255, 255, 255, 0.28);  
+  
+    color: #4b3028;  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 10px;  
+  
+    line-height: 1;  
+  
+    outline: none;  
+}  
+  
+  
+/* Placeholder */  
+  
+#rsvpForm input::placeholder,  
+#rsvpForm textarea::placeholder {  
+    color: rgba(95, 70, 60, 0.55);  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 9px;  
+}  
+  
+  
+/* Textareas */  
+  
+#rsvpForm textarea {  
+    min-height: 40px;  
+  
+    resize: none;  
+}  
+  
+#rsvpForm textarea#guests {  
+    min-height: 40px;  
+}  
+  
+  
+/* Focus */  
+  
+#rsvpForm input:focus,  
+#rsvpForm textarea:focus {  
+    border-color: rgba(107, 37, 43, 0.65);  
+  
+    background: rgba(255, 255, 255, 0.42);  
+}  
+  
+  
+/* Submit */  
+  
+#rsvpForm .rsvp-button {  
+    width: 100%;  
+  
+    margin-top: 9px;  
+  
+    padding: 7px 3px;  
+  
+    background: #6b252b;  
+  
+    color: white;  
+  
+    border: none;  
+  
+    border-radius: 8px;  
+  
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+  
+    font-size: 9px;  
+  
+    font-weight: normal;  
+  
+    letter-spacing: 1px;  
+  
+    cursor: pointer;  
+}  
+  
+  
+/* Thank you */  
+  
+.rsvp-thankyou {  
+    display: block;  
+    margin-top: 22px;  
+    text-align: center;  
+    color: #6b3030;  
+}  
+  
+  .thankyou-heart {  
+    width: 105px;  
+    height: auto;  
+    display: block;  
+    margin: 0px auto 0px;  
+    position: relative;  
+top: 0px;  
+  }  
+  
+/* Thank you */  
+.thankyou-script {  
+    font-family:'Allura', cursive !important;  
+        
+    font-size: 20px;  
+    font-style: italic;  
+    font-weight: normal;  
+    color: #6b3030;  
+    line-height: 1;  
+    margin-bottom: 12px;  
+  position: relative;  
+top: -6px;  
+}  
+  
+/* WE CAN'T WAIT TO CELEBRATE WITH YOU */  
+.thankyou-text {  
+    font-family: Georgia, "Times New Roman", serif;  
+    font-size: 5px;  
+    font-weight: normal;  
+    letter-spacing: 1.5px;  
+    color: #6b3030;  
+    line-height: 1.4;  
+    margin-bottom: 12px;  
+  position: relative;  
+top: -5px;  
+    text-align: center;  
+}  
+  
+/* الرسمه السفلية */  
+  
+  .botanical-divider img {  
+    width: 36%;  
+    max-width: 280px;  
+    height: 28px;  
+    display: block;  
+    margin: -7px auto -7px;  
+    position: relative;  
+top: -7px;  
+  }  
+    
+/* =========================  
+   MOBILE ADJUSTMENT  
+========================= */  
+  
+@media (max-height: 700px) {  
+  
+    .countdown-frame {  
+  
+        height: 90%;  
+  
+        padding-top: 20px;  
+    }  
+  
+    .countdown-top-decoration {  
+  
+        margin-bottom: 12px;  
+    }  
+  
+    .countdown-subtitle {  
+  
+        margin-bottom: 10px;  
+    }  
+  
+    .couple-photo-frame {  
+  
+        height: 34vh;  
+  
+        width: 52vw;  
+    }  
+  
+    .countdown {  
+  
+    margin-top: 6px;  
+}  
+  
+.countdown-date {  
+    margin-top: 10px;  
+}  
+  
+    }  
+  
+  </style>  </head>  <body>  <!-- =========================  
+     OPENING ENVELOPE  
+========================= -->  <section id="opening">  <img  
+    id="envelope"  
+    src="Envelope.png"  
+    alt="Wedding invitation envelope"  
+>  
+
+<button id="openButton">  
+    OPEN YOUR INVITATION  
+</button>
+
+  <img src="القلب.png" alt="" class="open-heart-decoration">  </section>  <!-- =========================  
+     OPENING VIDEO  
+========================= -->  <video
+id="openingVideo"
+autoplay
+muted
+playsinline
+preload="auto"
+
+> 
+
+<source  
+    src="Open envelope.mp4"  
+    type="video/mp4"  
+>
+
+</video>  <!-- =========================  
+     WEBSITE  
+========================= -->  <main id="website">  <!-- =====================  
+     PAGE 1 — CARD  
+====================== -->  
+
+<section class="page card-page">  
+
+    <img  
+        src="Card.png"  
+        alt="Malek & JO-Anne Wedding Invitation"  
+    >  
+
+</section>
+
+<!-- =====================  
+     PAGE 2 — OUR STORY  
+===================== -->  <section class="page info-page story-page">  <div class="info-box story-box">  
+
+    <h1>  
+        OUR STORY  
+    </h1>  
+
+    <img  
+        src="القلب.png"  
+        alt=""  
+        class="page-heart-decoration"  
+    >  
+
+    <div class="story-text">  
+
+        <p>  
+            Our story began with a trip to Jordan in 2019. While Jordan was already home to one of us, that first trip sparked a connection that continued long after the journey ended. Once back home, we started talking and, over the years, always found our way back to each other, despite the distance and the different countries we called home.  
+        </p>  
+
+        <p>  
+            For years, our connection lived through conversations and across borders. Then, in 2025, an unexpected trip to Luxembourg finally made it real — and for the first time, we were together in person.  
+        </p>  
+
+        <p>  
+            After all these years, we’re finally able to share our lives without the distance between us.  
+        </p>  
+
+        <p>  
+            And now, we only hope that no one has to catch a flight just to see the person they love — except this time, we hope you’ll catch one to Jordan to celebrate our love with us.  
+        </p>  
+
+    </div>  
+
+</div>
+
+</section>  <!-- =====================  
+     PAGE 5 — COUNTDOWN
+
+====================== -->
+
+<section class="page countdown-page">  <div class="countdown-frame">
+
+  <h1 class="countdown-title">  
+    WE ARE COUNTING DOWN  
+</h1>  <div class="countdown-subtitle">  
+    to forever  
+</div>  <img src="القلب.png" alt="" class="page-heart-decoration">  <!-- COUPLE PHOTO -->  
+
+        <div class="couple-photo-frame">  
+
+            <img  
+class="couple-photo"  
+src="صورة العرسان.png"  
+alt="Malek & JO-Anne"
+
+> 
+
+</div>  
+
+
+        <div class="photo-decoration">  
+            ♡  
+        </div>  
+
+
+        <!-- COUNTDOWN -->  
+
+        <div class="countdown">  
+
+
+            <div class="countdown-item">  
+
+                <div  
+                    id="days"  
+                    class="countdown-number">  
+                    000  
+                </div>  
+
+                <div class="countdown-label">  
+                    DAYS  
+                </div>  
+
+            </div>  
+
+
+            <div class="countdown-item">  
+
+                <div  
+                    id="hours"  
+                    class="countdown-number">  
+                    00  
+                </div>  
+
+                <div class="countdown-label">  
+                    HOURS  
+                </div>  
+
+            </div>  
+
+
+            <div class="countdown-item">  
+
+                <div  
+                    id="minutes"  
+                    class="countdown-number">  
+                    00  
+                </div>  
+
+                <div class="countdown-label">  
+                    MINUTES  
+                </div>  
+
+            </div>  
+
+
+            <div class="countdown-item">  
+
+                <div  
+                    id="seconds"  
+                    class="countdown-number">  
+                    00  
+                </div>  
+
+                <div class="countdown-label">  
+                    SECONDS  
+                </div>  
+
+            </div>  
+
+
+        </div>  
+
+
+        <div class="countdown-date">  
+            4 APRIL 2027  
+        </div>  
+
+
+        <div class="countdown-time">  
+            4:00 PM  
+        </div>  
+
+
+    </div>  
+
+</section>  
+
+
+<!-- =====================  
+     PAGE 6 — RSVP  
+====================== -->
+
+  <section class="page info-page rsvp-page">  <div class="rsvp-new-box">  
+
+    <!-- TITLE -->  
+
+    <h1 class="rsvp-new-title">  
+        RSVP  
+    </h1>  
+
+
+    <!-- HEART -->  
+
+    <img  
+        src="القلب.png"  
+        alt=""  
+        class="rsvp-top-heart"  
+    >  
+
+
+    <!-- INTRO -->  
+
+    <p class="rsvp-new-intro">  
+        Kindly let us know if you will<br>  
+        be joining us  
+    </p>  
+
+
+    <!-- FORM -->  
+
+    <form id="newRsvpForm">  
+
+        <!-- NAME -->  
+
+        <div class="rsvp-field">  
+
+            <label for="newGuestName">  
+                YOUR NAME  
+            </label>  
+
+            <input  
+                type="text"  
+                id="newGuestName"  
+                placeholder="Enter your name"  
+                required  
+            >  
+
+        </div>  
+
+
+        <!-- ATTENDANCE -->  
+
+        <div class="rsvp-field attendance-field">  
+
+            <label>  
+                WILL YOU BE JOINING US?  
+            </label>  
+
+
+            <div class="attendance-options">  
+
+                <!-- YES -->  
+
+                <label class="attendance-option">  
+
+                    <input  
+                        type="radio"  
+                        name="attendance"  
+                        value="yes"  
+                    >  
+
+                    <span class="radio-circle"></span>  
+
+                    <span class="option-text">  
+                        Yes, I will be attending  
+                    </span>  
+
+                </label>  
+
+
+                <!-- NO -->  
+
+                <label class="attendance-option">  
+
+                    <input  
+                        type="radio"  
+                        name="attendance"  
+                        value="no"  
+                    >  
+
+                    <span class="radio-circle"></span>  
+
+                    <span class="option-text">  
+                        No, I won’t be attending  
+                    </span>  
+
+                </label>  
+
+            </div>  
+
+        </div>  
+
+
+        <!-- ATTENDING WITH -->  
+
+        <div  
+            id="attendingWithField"  
+            class="rsvp-field attending-with"  
+        >  
+
+            <label for="attendingWith">  
+                WHO WILL BE ATTENDING WITH YOU?  
+            </label>  
+
+            <input  
+                type="text"  
+                id="attendingWith"  
+                placeholder="Write the names of the people who will be attending"  
+            >  
+
+        </div>  
+
+
+        <!-- SUBMIT -->  
+
+        <button  
+            type="submit"  
+            class="rsvp-new-submit"  
+        >  
+            SUBMIT RSVP  
+        </button>  
+
+
+    </form>  
+
+
+    <!-- =====================  
+         AFTER SUBMIT  
+    ====================== -->  
+
+    <div  
+        id="rsvpThankYou"  
+        class="rsvp-new-thankyou"  
+    >  
+
+
+
+
+        <!-- THANK YOU -->  
+
+        <div class="rsvp-thankyou-script">  
+            Thank you  
+        </div>  
+
+
+        <!-- ONLY FOR YES -->  
+
+        <div  
+            id="celebrationMessage"  
+            class="rsvp-celebration"  
+        >  
+
+            <div class="rsvp-celebration-text">  
+                WE CAN’T WAIT TO CELEBRATE WITH YOU  
+            </div>  
+
+
+            <!-- BRANCH -->  
+
+            <div class="rsvp-branch">  
+                <img  
+                    src="الغصن.png"  
+                    alt=""  
+                >  
+            </div>  
+
+        </div>  
+
+    </div>  
+
+</div>  
+
+
+<style>  
+
+/* =========================  
+   RSVP PAGE  
+========================= */  
+
+.rsvp-page {  
+background-image: url("Background.png");  
+background-size: cover;  
+background-position: center;  
+background-repeat: no-repeat;  
+
+display: flex;  
+align-items: center;  
+justify-content: center;  
+
+text-align: center;  
+
+height: auto;  
+min-height: 100dvh;  
+overflow: visible;  
+
+scroll-snap-align: start;  
+scroll-snap-stop: normal;  
+
+padding: 30px 0;  
+}  
+
+
+/* =========================  
+   MAIN BOX  
+========================= */  
+
+.rsvp-new-box {  
+
+    width: 80%;  
+
+    max-width: 690px;  
+
+    padding: 45px 40px 30px;  
+
+    background: rgba(255, 248, 238, 0.78);  
+
+    border: 1px solid rgba(255, 255, 255, 0.85);  
+
+    box-shadow:  
+        0 10px 40px rgba(70, 35, 20, 0.15);  
+
+    text-align: center;  
+
+    position: relative;  
+}  
+
+
+/* =========================  
+   RSVP TITLE  
+========================= */  
+
+.rsvp-new-title {  
+
+    margin: 0 0 12px;  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 46px;  
+
+    font-weight: normal;  
+
+    letter-spacing: 5px;  
+
+    color: #5b2025;  
+}  
+
+
+/* =========================  
+   TOP HEART  
+========================= */  
+
+.rsvp-top-heart {  
+
+    width: 105px;  
+
+    height: auto;  
+
+    display: block;  
+
+    margin: -2px auto 22px;  
+}  
+
+
+/* =========================  
+   INTRO  
+========================= */  
+
+.rsvp-new-intro {  
+
+    margin: 0 auto 32px;  
+
+    font-family:  
+        'Allura',  
+        cursive;  
+
+    font-size: 24px;  
+
+    font-weight: normal;  
+
+    line-height: 1.45;  
+
+    letter-spacing: 0.4px;  
+
+    color: #765047;  
+
+    text-align: center;  
+}  
+
+
+/* =========================  
+   FIELDS  
+========================= */  
+
+.rsvp-field {  
+
+    width: 100%;  
+
+    text-align: left;  
+
+    margin-bottom: 22px;  
+}  
+
+
+.rsvp-field label {  
+
+    display: block;  
+
+    margin-bottom: 9px;  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 13px;  
+
+    font-weight: normal;  
+
+    letter-spacing: 2px;  
+
+    color: #5b302b;  
+}  
+
+
+/* =========================  
+   TEXT INPUT  
+========================= */  
+
+.rsvp-field input[type="text"] {  
+
+    width: 100%;  
+
+    height: 48px;  
+
+    padding: 0 14px;  
+
+    border: 1px solid rgba(120, 70, 45, 0.40);  
+
+    border-radius: 12px;  
+
+    background: rgba(255, 255, 255, 0.28);  
+
+    color: #4b3028;  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 14px;  
+
+    outline: none;  
+}  
+
+
+.rsvp-field input[type="text"]::placeholder {  
+
+    color: rgba(95, 70, 60, 0.55);  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+}  
+
+
+.rsvp-field input[type="text"]:focus {  
+
+    border-color: rgba(107, 37, 43, 0.65);  
+
+    background: rgba(255, 255, 255, 0.42);  
+}  
+
+
+/* =========================  
+   ATTENDANCE OPTIONS  
+   TWO BOXES SIDE BY SIDE  
+========================= */  
+
+.attendance-options {  
+
+    width: 100%;  
+
+    display: grid;  
+
+    grid-template-columns: 1fr 1fr;  
+
+    gap: 10px;  
+}  
+
+
+.attendance-option {  
+
+    min-height: 58px;  
+
+    padding: 10px 12px;  
+
+    border: 1px solid rgba(120, 70, 45, 0.35);  
+
+    border-radius: 12px;  
+
+    background: rgba(255, 255, 255, 0.18);  
+
+    display: flex;  
+
+    align-items: center;  
+
+    justify-content: flex-start;  
+
+    gap: 10px;  
+
+    cursor: pointer;  
+
+    transition:  
+        background 0.2s ease,  
+        border-color 0.2s ease;  
+}  
+
+
+/* Hide real radio */  
+
+.attendance-option input {  
+
+    position: absolute;  
+
+    opacity: 0;  
+
+    pointer-events: none;  
+}  
+
+
+/* Radio circle */  
+
+.radio-circle {  
+
+    width: 24px;  
+
+    height: 24px;  
+
+    min-width: 24px;  
+
+    border: 1.5px solid #765047;  
+
+    border-radius: 50%;  
+
+    position: relative;  
+
+    display: block;  
+}  
+
+
+/* Selected */  
+
+.attendance-option input:checked + .radio-circle {  
+
+    border-color: #7b2932;  
+
+    background: #7b2932;  
+}  
+
+
+.attendance-option input:checked + .radio-circle::after {  
+
+    content: "";  
+
+    position: absolute;  
+
+    width: 8px;  
+
+    height: 8px;  
+
+    background: white;  
+
+    border-radius: 50%;  
+
+    top: 50%;  
+
+    left: 50%;  
+
+    transform: translate(-50%, -50%);  
+}  
+
+
+/* Selected box = light dusty rose */  
+
+.attendance-option:has(input:checked) {  
+
+    background: rgba(198, 137, 139, 0.22);  
+
+    border-color: rgba(145, 76, 80, 0.45);  
+}  
+
+
+.option-text {  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 13px;  
+
+    line-height: 1.3;  
+
+    color: #4b3028;  
+
+    text-align: left;  
+}  
+
+
+/* =========================  
+   ATTENDING WITH  
+========================= */  
+
+.attending-with {  
+
+    display: none;  
+}  
+
+
+.attending-with.show {  
+
+    display: block;  
+}  
+
+
+/* =========================  
+   SUBMIT  
+========================= */  
+
+.rsvp-new-submit {  
+
+    width: 100%;  
+
+    height: 48px;  
+
+    margin-top: 2px;  
+
+    padding: 0;  
+
+    background: #6b252b;  
+
+    color: white;  
+
+    border: none;  
+
+    border-radius: 10px;  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 13px;  
+
+    letter-spacing: 2px;  
+
+    cursor: pointer;  
+}  
+
+
+/* =========================  
+   THANK YOU  
+========================= */  
+
+.rsvp-new-thankyou {  
+
+    display: none;  
+
+    text-align: center;  
+
+    margin-top: 25px;  
+}  
+
+
+.rsvp-new-thankyou.show {  
+
+    display: block;  
+}  
+
+
+/* Bottom heart */  
+
+.rsvp-bottom-heart {  
+
+    width: 105px;  
+
+    height: auto;  
+
+    display: block;  
+
+    margin: 0 auto 2px;  
+}  
+
+
+/* Thank you script */  
+
+.rsvp-thankyou-script {  
+
+    font-family:  
+        'Allura',  
+        cursive;  
+
+    font-size: 27px;  
+
+    font-style: normal;  
+
+    font-weight: normal;  
+
+    color: #6b3030;  
+
+    line-height: 1;  
+
+    margin-bottom: 22px;  
+}  
+
+
+/* =========================  
+   YES ONLY  
+========================= */  
+
+.rsvp-celebration {  
+
+    display: none;  
+}  
+
+
+.rsvp-celebration.show {  
+
+    display: block;  
+}  
+
+
+.rsvp-celebration-text {  
+
+    font-family:  
+        Georgia,  
+        "Times New Roman",  
+        serif;  
+
+    font-size: 11px;  
+
+    font-weight: normal;  
+
+    letter-spacing: 2px;  
+
+    color: #6b3030;  
+
+    line-height: 1.4;  
+
+    margin-bottom: 12px;  
+
+    text-align: center;  
+}  
+
+
+/* =========================  
+   BRANCH  
+========================= */  
+
+.rsvp-branch img {  
+
+    width: 36%;  
+
+    max-width: 280px;  
+
+    height: auto;  
+
+    display: block;  
+
+    margin: 0 auto;  
+}  
+
+
+/* =========================  
+   MOBILE  
+========================= */  
+
+@media (max-width: 500px) {  
+
+    .rsvp-new-box {  
+
+        width: 80%;  
+
+        padding:  
+            35px  
+            18px  
+            25px;  
+    }  
+
+
+    .rsvp-new-title {  
+
+        font-size: 40px;  
+    }  
+
+
+    .rsvp-new-intro {  
+
+        font-size: 22px;  
+
+        margin-bottom: 27px;  
+    }  
+
+
+    .rsvp-field label {  
+
+        font-size: 11px;  
+
+        letter-spacing: 1.5px;  
+    }  
+
+
+    .attendance-options {  
+
+        gap: 7px;  
+    }  
+
+
+    .attendance-option {  
+
+        min-height: 54px;  
+
+        padding: 8px;  
+    }  
+
+
+    .radio-circle {  
+
+        width: 21px;  
+
+        height: 21px;  
+
+        min-width: 21px;  
+    }  
+
+
+    .option-text {  
+
+        font-size: 11px;  
+    }  
+
+
+    .rsvp-field input[type="text"] {  
+
+        height: 45px;  
+
+        font-size: 12px;  
+    }  
+
+}  
+
+
+/* =========================  
+   SHORT PHONES  
+========================= */  
+
+@media (max-height: 700px) {  
+
+    .rsvp-new-box {  
+
+        padding-top: 25px;  
+
+        padding-bottom: 20px;  
+    }  
+
+
+    .rsvp-new-title {  
+
+        font-size: 36px;  
+    }  
+
+
+    .rsvp-top-heart {  
+
+        width: 85px;  
+
+        margin-bottom: 12px;  
+    }  
+
+
+    .rsvp-new-intro {  
+
+        font-size: 19px;  
+
+        margin-bottom: 20px;  
+    }  
+
+
+    .rsvp-field {  
+
+        margin-bottom: 14px;  
+    }  
+
+
+    .rsvp-field label {  
+
+        margin-bottom: 5px;  
+
+        font-size: 9px;  
+    }  
+
+
+    .rsvp-field input[type="text"] {  
+
+        height: 38px;  
+    }  
+
+
+    .attendance-option {  
+
+        min-height: 45px;  
+    }  
+
+
+    .rsvp-new-submit {  
+
+        height: 40px;  
+    }  
+
+}  
+
+  /* FIX RSVP SCROLL */
+
+.rsvp-page {
+height: auto !important;
+min-height: 100dvh !important;
+overflow: visible !important;
+scroll-snap-stop: normal !important;
+}
+
+</style>  
+
+
+<script>  
+
+/* =========================  
+   RSVP INTERACTION  
+========================= */  
+
+const newRsvpForm =  
+    document.getElementById("newRsvpForm");  
+
+const attendingWithField =  
+    document.getElementById("attendingWithField");  
+
+const attendingWithInput =  
+    document.getElementById("attendingWith");  
+
+const rsvpThankYou =  
+    document.getElementById("rsvpThankYou");  
+
+const celebrationMessage =  
+    document.getElementById("celebrationMessage");  
+
+
+/* =========================  
+   YES / NO CHANGE  
+========================= */  
+
+document  
+    .querySelectorAll('input[name="attendance"]')  
+    .forEach(function (radio) {  
+
+        radio.addEventListener("change", function () {  
+
+            if (this.value === "yes") {  
+
+                attendingWithField.classList.add("show");  
+
+                attendingWithInput.required = true;  
+
+            } else {  
+
+                attendingWithField.classList.remove("show");  
+
+                attendingWithInput.required = false;  
+
+                attendingWithInput.value = "";  
+
+            }  
+
+        });  
+
+    });  
+
+
+/* =========================  
+   SUBMIT  
+========================= */  
+
+newRsvpForm.addEventListener(  
+    "submit",  
+    function (event) {  
+
+        event.preventDefault();  
+
+
+        const selected =  
+            document.querySelector(  
+                'input[name="attendance"]:checked'  
+            );  
+
+
+        if (!selected) {  
+
+            return;  
+
+        }  
+
+
+      /* Hide the form */
+
+newRsvpForm.style.display = "none";
+
+/* Hide the RSVP introduction */
+
+document.querySelector(".rsvp-new-intro").style.display = "none";
+
+/* Show Thank You */
+
+rsvpThankYou.classList.add("show");
+
+/* SHOW BRANCH FOR BOTH YES AND NO */
+
+celebrationMessage.classList.add("show");
+
+if (selected.value === "no") {
+celebrationMessage.querySelector(".rsvp-celebration-text").style.display = "none";
+}
+
+}  
+);  
+
+</script>
+
+</section>  <!-- =========================  
+     MAIN JAVASCRIPT  
+========================= -->  <script>  
+  
+/* =========================  
+   ELEMENTS  
+========================= */  
+  
+const opening =  
+    document.getElementById("opening");  
+  
+const openButton =  
+    document.getElementById("openButton");  
+  
+const openingVideo =  
+    document.getElementById("openingVideo");  
+  
+const website =  
+    document.getElementById("website");  
+  
+  
+/* =========================  
+   ENVELOPE → VIDEO  
+========================= */  
+  
+openButton.addEventListener("click", function () {  
+  
+    opening.style.display = "none";  
+  
+    openingVideo.style.display = "block";  
+  
+    openingVideo.currentTime = 0;  
+  
+    openingVideo.muted = true;  
+  
+  openingVideo.play().catch(function() {  
+    console.log("Video could not autoplay.");  
+});  
+  
+});  
+  
+  
+/* =========================  
+   VIDEO → WEBSITE  
+========================= */  
+  
+openingVideo.addEventListener("ended", function () {  
+  
+    openingVideo.style.display = "none";  
+  
+    website.style.display = "block";  
+  
+    website.scrollTop = 0;  
+  
+});  
+  
+  
+/* =========================  
+   COUNTDOWN  
+========================= */  
+  
+const weddingDate =  
+    new Date("April 4, 2027 16:00:00").getTime();  
+  
+  
+function updateCountdown() {  
+  
+    const now =  
+        new Date().getTime();  
+  
+    const difference =  
+        weddingDate - now;  
+  
+  
+    if (difference <= 0) {  
+  
+        document.getElementById("days").innerText = "000";  
+  
+        document.getElementById("hours").innerText = "00";  
+  
+        document.getElementById("minutes").innerText = "00";  
+  
+        document.getElementById("seconds").innerText = "00";  
+  
+        return;  
+    }  
+  
+  
+    const days =  
+        Math.floor(  
+            difference /  
+            (1000 * 60 * 60 * 24)  
+        );  
+  
+  
+    const hours =  
+        Math.floor(  
+            (difference %  
+            (1000 * 60 * 60 * 24)) /  
+            (1000 * 60 * 60)  
+        );  
+  
+  
+    const minutes =  
+        Math.floor(  
+            (difference %  
+            (1000 * 60 * 60)) /  
+            (1000 * 60)  
+        );  
+  
+  
+    const seconds =  
+        Math.floor(  
+            (difference %  
+            (1000 * 60)) /  
+            1000  
+        );  
+  
+  
+    document.getElementById("days").innerText =  
+        String(days).padStart(3, "0");  
+  
+    document.getElementById("hours").innerText =  
+        String(hours).padStart(2, "0");  
+  
+    document.getElementById("minutes").innerText =  
+        String(minutes).padStart(2, "0");  
+  
+    document.getElementById("seconds").innerText =  
+        String(seconds).padStart(2, "0");  
+  
+}  
+  
+  
+updateCountdown();  
+  
+setInterval(updateCountdown, 1000);  
+  
+</script>  </body>  
+</html>
